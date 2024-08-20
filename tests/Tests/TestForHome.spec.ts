@@ -7,22 +7,19 @@ test('hotline_search', async ({page}) => {
   await homePage.navigateHome();
   const searchField = await homePage.getSearchField();
   await searchField.fill('Lenovo');
-  expect(true).toBe(true);
 });
 
 test('hotline footer', async ({ page }) => {
   const homePage = new HomePage(page);
   await homePage.navigateHome();
-  const Footer = homePage.getFooter();
-  expect(true).toBe(true);
-  });
+  const footer = homePage.getFooter();
+});
   
-  test('hotline checkbox', async ({ page }) => {
-    const homePage = new HomePage(page);
+test('hotline checkbox', async ({ page }) => {
+  const homePage = new HomePage(page);
   await homePage.navigateHome();
-  const Toggle = await homePage.getThemeToggle();
-  await Toggle.click();
-  expect(true).toBe(true);
-  }); 
+  const toggle = await homePage.getThemeToggle();
+  await toggle.click();
+}); 
 
  
